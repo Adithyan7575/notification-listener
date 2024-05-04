@@ -9,12 +9,15 @@ class Homepage extends StatelessWidget {
     SMSController smsController = Get.put(SMSController());
     return Scaffold(
         body: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        TextButton(
-          onPressed: () {
-            smsController.requestForPermission();
-          },
-          child: const Text("hi"),
+        Center(
+          child: TextButton(
+            onPressed: () {
+              smsController.requestForPermission();
+            },
+            child: const Text("hi"),
+          ),
         )
       ],
     ));
